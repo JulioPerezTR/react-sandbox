@@ -1,38 +1,105 @@
 .App {
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .main-container {
+    padding: 1rem 2rem;
+    background: white;
+    margin: 1rem 3rem;
+    text-align: left;
+    border-radius: 10px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    .source-name {
+      border-bottom: 1px solid;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    .document-content {
+      padding: 0 1rem;
+
+      span.document-header {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+          color: blue;
+          cursor: pointer;
+          width: fit-content;
+          text-decoration: underline;
+        }
+  
+        .keywords {
+          background: #dddddd;
+          padding: 0.5rem;
+          width: fit-content;
+          border-radius: 10px;
+        }
+      }
+
+      .summary {
+        padding: 1rem;
+        background: aliceblue;
+        border-radius: 10px;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .form-input {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 60%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    box-shadow: 10px 10px 10px #dddddd;
+    margin-bottom: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .form-input:placeholder-shown + .form-label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
   }
+
+  span.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    width: fit-content;
+  }
+
+  .typed-terms {
+    background: white;
+    padding: 1rem;
+    margin: 1rem 3rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .typed-term {
+    display: inline-block;
+    margin-right: 8px;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  span.term {
+    .remove-term {
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+    }
+  }
+
 }
